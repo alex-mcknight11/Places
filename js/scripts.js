@@ -1,5 +1,5 @@
 // Business Logic for Place Tracker
-function PlaceTracker(){
+function PlaceTracker() {
   this.Places = {};
   this.currentID = 0;
 }
@@ -14,17 +14,17 @@ PlaceTracker.prototype.assignId = function() {
   return this.currentId;
 };
 // Business Logic for Places
-function Places(location, landmarks, time) {
+function Place(location, landmarks, time) {
   this.location = location;
   this.landmarks = landmarks;
   this.time = time;
 };
 
-Places.prototype.PlaceEntry = function() {
+Place.prototype.PlaceEntry = function() {
   return "I went to" + this.location + "and saw" + this.landmarks + "during" + this.time + ".";
 };
 
 //let placetracker = new PlaceTracker();
-let destination = new Places("brazil", "bigjesus", "september");
+let destination = new Place("brazil", "bigjesus", "september");
 PlaceTracker.addplace(destination);
 PlaceTracker.Places;

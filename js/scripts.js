@@ -5,7 +5,7 @@ function PlaceTracker() {
 }
 
 PlaceTracker.prototype.addPlace = function(place) {
-place.id = this.assignID();
+place.id = this.assignID;
 this.Places[place.id] = place;
 };
 
@@ -24,7 +24,7 @@ Place.prototype.PlaceEntry = function() {
   return "I went to" + this.location + "and saw" + this.landmarks + "during" + this.time + ".";
 };
 
-//let placetracker = new PlaceTracker();
+let placetracker = new PlaceTracker();
 let destination = new Place("brazil", "bigjesus", "september");
-PlaceTracker.addplace(destination);
-PlaceTracker.Places;
+placetracker.addPlace(destination);
+placetracker.Place;
